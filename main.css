@@ -1,0 +1,25 @@
+/* Mobile base — no media query needed */
+.card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+}
